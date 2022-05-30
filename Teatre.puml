@@ -1,0 +1,69 @@
+@startuml
+class Espectador {
+-String nom
+-int edat
+-double diners
+
++Espectador(String nom, int edat, double diners)
++Espectador(int edat, double diners)
++Espectador(double diners)
++void setEdat(String nom)
++void setNom(int edat)
++void setDiners(double diners)
+
++String getNom()
++int getEdat()
++double getDiners()
++String toString()
+
++boolean majorEdat(int edatMinima)
++double pagarEntrada(double entrada)
++boolean teDiners (double entrada)
+}
+
+class Sessio{
+-String obra
+-double preu
+-int hora
+-int dia
+-Espectador [][] seients
++Sessio(String obra, double preu, int hora, int dia)
++Sessio(String obra, double preu, int dia)
++Sessio(String obra, int dia)
++void setObra(String obra)
++void setPreu(double preu)
++void setHora(int hora)
++void setDia(int dia)
++void setSeient(int fila, int columna, espectador espectadorGeneric)
++boolean seientBuit (int fila, int columna)
++void setOcupacio (int fila, int columna)
+
++String getObra()
++double getPreu()
++int getHora()
++int getDia()
++String toString()
++Boolean QuedenEntrades(Espectador[][] seients)
+
+}
+
+class Obra{
+-String titol
+-int durada
+-String autor
+-boolean majorEdat
+
++Obra(String titol, int durada, String autor, int majorEdat)
++Obra(String titol, int durada, String autor)
++Obra(String titol, int durada)
++void setTitol(String titol)
++void setDurada(int durada)
++void setAutor(String autor)
++void setMajorEdat(boolean majorEdat)
++String getTitol()
++int getDurada()
++String getAutor()
++int getMajorEdat()
++String toString()
+}
+@enduml
